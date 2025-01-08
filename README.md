@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The official site for $GLITCH. Memes to the Moon!">
+  <meta name="description" content="The official site for $GLITCH. The memecoin that disrupts the terminal!">
   <title>Glitch Terminal - Official Site</title>
   
   <!-- Google Fonts -->
