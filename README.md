@@ -160,7 +160,7 @@
     const terminalOutput = document.getElementById("output");
 
     // Path to your glitch sound file (replace with your actual file location)
-    const glitchSound = new Audio('https://yourdomain.com/glitch-sound.mp3');
+    const glitchSound = new Audio('https://yourdomain.com/glitch-01-231255.mp3');
     glitchSound.loop = false;  // Only play once per trigger
 
     // Cryptic or profound "truth" messages
