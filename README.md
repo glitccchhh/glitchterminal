@@ -15,6 +15,14 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      flex-direction: column; /* Allows vertical stacking */
+    }
+
+    #description {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: lime;
+      text-align: center;
     }
 
     #terminal {
@@ -34,6 +42,7 @@
       line-height: 1.5;
     }
 
+    /* Glitch effect */
     @keyframes glitch {
       0% {
         text-shadow: 2px 0px red, -2px 0px blue;
@@ -45,12 +54,22 @@
         text-shadow: 0px 0px red, 0px 0px blue;
       }
     }
+
   </style>
 </head>
 <body>
+  <!-- Meme Coin Description before the terminal -->
+  <div id="description">
+    <p>Welcome to the official terminal for [Your Meme Coin Name].</p>
+    <p>"Memes to the Moon 🚀"</p>
+    <p>Get ready to decode the truth hidden in the glitches...</p>
+  </div>
+
+  <!-- Glitch terminal -->
   <div id="terminal">
     <pre id="output"></pre>
   </div>
+
   <script>
     const terminalOutput = document.getElementById("output");
 
