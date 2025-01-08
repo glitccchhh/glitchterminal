@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -60,10 +60,10 @@
 <body>
   <!-- Meme Coin Description before the terminal -->
   <div id="description">
-    <p>Welcome to the official terminal for $GLITCH .</ p>
+    <p>Welcome to the official terminal for $GLITCH 
     <p>"Memes to the Moon 🚀"</p>
     <p>Get ready to decode the truth hidden in the glitches...</p>
-  </div>
+  
 
   <!-- Glitch terminal -->
   <div id="terminal">
@@ -120,5 +120,3 @@
 
     setInterval(updateTerminal, 100);
   </script>
-</body>
-</html>
