@@ -52,6 +52,25 @@
       margin-bottom: 30px;
     }
 
+    #ca {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.5rem;
+      color: #00ff00;
+      animation: glitch 0.3s infinite;
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 0px red, -2px 0px blue;
+      }
+      50% {
+        text-shadow: -2px 0px red, 2px 0px blue;
+      }
+      100% {
+        text-shadow: 0px 0px red, 0px 0px blue;
+      }
+    }
+
     .btn {
       padding: 10px 20px;
       font-size: 1.1rem;
@@ -94,19 +113,6 @@
       line-height: 1.5;
     }
 
-    /* Glitch Effect */
-    @keyframes glitch {
-      0% {
-        text-shadow: 2px 0px red, -2px 0px blue;
-      }
-      50% {
-        text-shadow: -2px 0px red, 2px 0px blue;
-      }
-      100% {
-        text-shadow: 0px 0px red, 0px 0px blue;
-      }
-    }
-
     /* Footer Section */
     #footer {
       margin-top: 50px;
@@ -132,8 +138,14 @@
   <!-- Hero Section -->
   <div id="hero">
     <h1>Glitch Terminal</h1>
-    <p>"Memes to the Moon 🚀"</p>
-    <a href="#buy-glitch" class="btn">BUY $GLITCH</a>
+    <p>"The memecoin that disrupts the terminal"</p>
+    <p>
+      Contract Address:  
+      <strong id="ca">BJStdQoQv3UKuNuK6vrueBFFJmDxmuQPL6SWcQKcpump</strong>
+      <br>
+      <button onclick="copyCA()" class="btn" style="margin-top: 10px;">Copy CA</button>
+    </p>
+    <a href="https://pump.fun/BJStdQoQv3UKuNuK6vrueBFFJmDxmuQPL6SWcQKcpump" class="btn">BUY $GLITCH</a>
   </div>
 
   <!-- Description -->
@@ -149,9 +161,9 @@
   <!-- Footer with Social Links -->
   <div id="footer">
     <div class="social-links">
-      <a href="https://twitter.com/youraccount" target="_blank">Twitter</a>
-      <a href="https://discord.gg/yourlink" target="_blank">Discord</a>
-      <a href="https://example.com" target="_blank">Official Site</a>
+      <a href="https://x.com/glitchterminall?s=09" target="_blank">Twitter</a>
+      <a href="https://t.me/glitch_terminal" target="_blank">Telegram</a>
+      <a href="https://glitccchhh.github.io/glitchterminal/" target="_blank">Official Site</a>
     </div>
     <p>&copy; 2025 $GLITCH - All Rights Reserved</p>
   </div>
@@ -159,11 +171,10 @@
   <script>
     const terminalOutput = document.getElementById("output");
 
-    // Path to your glitch sound file (replace with your actual file location)
+    // Path to your glitch sound file
     const glitchSound = new Audio('https://yourdomain.com/glitch-01-231255.mp3');
     glitchSound.loop = false;  // Only play once per trigger
 
-    // Cryptic or profound "truth" messages
     const truths = [
       "The simulation is unstable.",
       "Consciousness is the key to reality.",
@@ -198,17 +209,24 @@
       return lines.join("\n");
     }
 
-    // Play glitch sound at random intervals
     function playGlitchSound() {
-      if (Math.random() < 0.15) {  // 15% chance of playing sound
+      if (Math.random() < 0.15) {
         glitchSound.play();
       }
     }
 
-    // Updates the terminal periodically
     function updateTerminal() {
       terminalOutput.textContent = generateTerminalText();
-      playGlitchSound();  // Call glitch sound function
+      playGlitchSound();
+    }
+
+    function copyCA() {
+      const caText = "BJStdQoQv3UKuNuK6vrueBFFJmDxmuQPL6SWcQKcpump";
+      navigator.clipboard.writeText(caText).then(() => {
+        alert("Contract Address copied to clipboard!");
+      }).catch(err => {
+        console.error("Failed to copy Contract Address:", err);
+      });
     }
 
     setInterval(updateTerminal, 100);
